@@ -6,6 +6,11 @@ import { formatMoney, getProductCount } from "../../utils/utils";
 import { UseAppContext } from "../../context/appContext";
 import QuantityController from "../quantityController/quantityController";
 
+/**
+ * Renders CartCard component
+ * @param {*} CartCard component props
+ * @returns {React.Component} renders CartCard component
+ */
 const CartCard = ({ product }) => {
   const { initialState, removeItemFn, incrementItemFn, decrementItemFn } =
     UseAppContext();

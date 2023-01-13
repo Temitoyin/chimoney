@@ -5,6 +5,12 @@ import styles from "./productCard.module.scss";
 import { formatMoney } from "../../utils/utils";
 import Link from "next/link";
 import { UseAppContext } from "../../context/appContext";
+
+/**
+ * Render ProductCard component
+ * @param {*} ProductCard component props
+ * @returns {React.Component} renders ProductCard component
+ */
 const ProductCard = ({ name, price, productId, product }) => {
   const { addToCartFn } = UseAppContext();
 

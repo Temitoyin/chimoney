@@ -1,4 +1,4 @@
-import React, { useEffect, createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { useRouter } from "next/router";
 import {
   addToCart,

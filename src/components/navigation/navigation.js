@@ -5,6 +5,10 @@ import { UseAppContext } from "../../context/appContext";
 import { getTotalCount } from "../../utils/utils";
 import Link from "next/link";
 
+/**
+ * Renders Navigation component
+ * @returns {React.Component} renders Navigation component
+ */
 const Navigation = () => {
   const { initialState } = UseAppContext();
   const [count, setCount] = useState(0);

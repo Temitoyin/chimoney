@@ -72,3 +72,26 @@ export const products = [
     seller: "jumangi",
   },
 ];
+
+export const paymentOptions = [
+  {
+    id: 1,
+    title: "Pay Now",
+    code: "PON",
+    description:
+      "You can now use various cards to pay on our website (MasterCard, Verve, Visa)",
+  },
+  {
+    id: 2,
+    code: "BNPL",
+    title: "By Now Pay Later",
+    description:
+      "Enjoy the ability to buy any product of your choice and spread the payment over time",
+  },
+  {
+    id: 3,
+    code: "POD",
+    title: "Pay On Delivery",
+    description: "Pay after collecting your products",
+  },
+];

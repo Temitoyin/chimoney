@@ -1,0 +1,33 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.paymentOptionCard{
+    display: flex;
+    height: 100px;
+    border-bottom: 0.1px solid $grey2;
+    padding: 0 30px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    input{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    &_info{
+        margin-left: 8px;
+        h1{
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        p{
+            font-size: 16px;
+            color: $grey2;
+        }
+    }
+}
+.active{
+    background-color:$blue4;
+    input{
+        accent-color: $blue3;
+    }
+}

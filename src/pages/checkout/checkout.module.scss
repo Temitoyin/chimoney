@@ -1,0 +1,61 @@
+@import '../../assets/styles/shared-styles.scss';
+.checkout{
+   
+    &_navWrapper{
+        width: 100%;
+        box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.15);
+    }
+    &_nav{
+        display: flex;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        height: 50px;
+        padding: 0 30px;
+            @include media('<=tablet') {
+                padding: 0 16px;
+            }
+            &_logo {
+                    p {
+                        font-family: 'Pacifico', cursive;
+                        font-size: 20px;
+                    }
+                }
+                h1{
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    position: absolute;
+                    align-self: center;
+                    justify-self: center;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+                    
+                }
+    }
+    &_content{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 50px auto 0 auto;
+        padding: 0 30px;
+        @include media('<=tablet') {
+            flex-direction: column;
+            padding: 0 16px;
+            }
+        &Right{
+            width: 70%;
+            @include media('<=tablet') {
+                width: 100%;
+            }
+        }
+        &Left {
+            width: 29%;
+            @include media('<=tablet') {
+                width: 100%;
+            }
+        }
+    }
+}
