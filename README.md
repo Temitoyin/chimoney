@@ -29,14 +29,12 @@ From within the app run the following commands
 
 ```sh
 yarn
-
 ```
 
 to install the dependencies
 
 ```sh
 yarn dev
-
 ```
 
 to start the project Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
