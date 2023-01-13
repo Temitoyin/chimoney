@@ -27,14 +27,14 @@ Ensure you have the following softwares installed:
 
 From within the app run the following commands
 
-```yarn
-
+```sh
+yarn
 ```
 
 to install the dependencies
 
-```yarn dev
-
+```sh
+yarn dev
 ```
 
 to start the project Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -43,19 +43,19 @@ to start the project Open [http://localhost:3000](http://localhost:3000) with yo
 
 The root folder is the src
 This contains:
--assets
+assets
 Assets contain folder like images, styles or fonts, in this case it only contains styles, the styles are built in a modular way to separate order of concerns and then exported together as a single stylesheet
 
--component
+components
 Components are the various react components created in the project
 
--context
+context
 Context holds the context logic used in creating this project
 
--pages
+pages
 Pages are the various pages that display on accessing each route
 
--utils
+utils
 This contains helper functions
 
 ## Features
@@ -126,7 +126,7 @@ End to end tests should be written to reduce error rate
 
 -Upload images to cloudinary to enable image transforms and optimizations
 
-### Styles
+## Styles
 
 Styles are built in a modular way. Each folder houses the styles needed for it to render. The project uses camelCase naming convention.
 
