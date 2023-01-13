@@ -1,0 +1,15 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.layout{
+    min-height: 100vh;
+    &_children{
+        position: relative;
+        height: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 30px 40px 30px;
+        @include media("<=phone"){
+            padding: 0 16px 40px 30px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.cartCard{
+    height: 200px;
+    padding: 0 30px; 
+    display: flex;
+    overflow: hidden;
+    border-bottom: 0.5px solid $grey2;
+    @include media("<=phone"){
+        padding: 0px; 
+        align-items: center;
+    }
+    &_image{
+        height: 100%;
+        width: 200px;
+        margin-right: 18px;
+        flex-shrink: 0;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        @include media("<=phone"){
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &_info{
+        width: 100%;
+        padding: 40px 0px 12px 0px;
+        font-family: 'Roboto', sans-serif;
+        &_top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include media("<=phone"){
+                flex-direction: column;
+            }
+            .name{
+                font-size: 20px;
+                font-weight: 500;
+                @include media("<=phone"){
+                    width: 60%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 16px;
+                }
+            }
+            .price{
+                font-size: 20px;
+                font-weight: 700;
+                @include media("<=phone"){
+                    margin-top: 8px;
+                    font-size: 18px;
+                }
+            }
+        }
+        &_seller{
+            color: $purple;
+            margin-top: 8px;
+            @include media("<=phone"){
+                font-size: 14px;
+            }
+            span{
+                color: $grey2;
+            }
+        }
+        &_bottom{
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+
+            &ButtonWrapper{
+                height: 35px;
+                margin-top: 10px;
+                @include media("<=phone"){
+                    height: 25px;
+                }
+            }
+            &ButtonClass{
+                width: 100%;
+                height: 100%;
+                color: $black;
+                font-weight: 700;
+                background-color: $white;
+                border: 0.1px solid $blue;
+                border-radius: 3px;
+                margin-left: 8px;
+            }
+        }
+    }
+}
