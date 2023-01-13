@@ -9,6 +9,11 @@ import { products } from "../../../mockData/mockData";
 import { formatMoney } from "../../utils/utils";
 import QuantityController from "../../components/quantityController/quantityController";
 
+/**
+ * Render ProductDetail page
+ * @param {*} ProductDetail page props
+ * @returns {React.Component} renders ProductDetail page
+ */
 const ProductDetail = () => {
   const { addToCartFn } = UseAppContext();
   const [product, setProduct] = useState({});
@@ -79,49 +84,3 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
-
-export const addToCart = (product, type) => {
-  let newCart;
-  let tempQuantity;
-  const totalQuantity = localStorage.getItem("totalQuantity");
-  let totalParsedQuantity = JSON.parse(totalQuantity);
-  const cart = localStorage.getItem("cart");
-  const parsedCart = JSON.parse(cart);
-  const replicatedProduct = JSON.parse(JSON.stringify(product));
-  const tempProduct = {};
-  if (!parsedCart) {
-    localStorage.setItem("cart", JSON.stringify({}));
-  }
-  if (parsedCart && parsedCart[replicatedProduct.id]) {
-    const currentQuantity = parsedCart[replicatedProduct.id].quantity;
-    tempQuantity = parseInt(currentQuantity);
-    if (replicatedProduct.quantity >= 1 && type === "productDetail") {
-    } else {
-      quantity += 1;
-    }
-
-    totalParsedQuantity += 1;
-    replicatedProduct.quantity = quantity;
-    parsedCart[replicatedProduct.id] = replicatedProduct;
-    newCart = { ...parsedCart };
-  } else {
-    tempProduct[product.id] = replicatedProduct;
-    if (tempProduct[product.id].quantity > 1) {
-      quantity = tempProduct[product.id].quantity;
-    } else {
-      quantity = 1;
-    }
-    tempProduct[product.id].quantity = quantity;
-    if (tempProduct[product.id].quantity > 1) {
-      totalParsedQuantity += tempProduct[product.id].quantity;
-    } else if (tempProduct[product.id].quantity <= 1) {
-      totalParsedQuantity += 1;
-    } else {
-      totalParsedQuantity = 1;
-    }
-    newCart = { ...tempProduct, ...parsedCart };
-  }
-  localStorage.setItem("totalQuantity", JSON.stringify(totalParsedQuantity));
-  localStorage.setItem("cart", JSON.stringify(newCart));
-  return true;
-};

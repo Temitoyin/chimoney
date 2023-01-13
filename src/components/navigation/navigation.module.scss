@@ -4,6 +4,11 @@
 background-color: $blue;
 height: 60px;
 color: $white;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+
 .nav{
     align-items: center;
     height: 100%;
@@ -13,6 +18,7 @@ color: $white;
     margin: 0 auto;
     padding: 0 30px;
     @include media("<=phone"){
+       
         padding: 0 16px;
     }
     &_left{
