@@ -1,5 +1,12 @@
-import '../styles/globals.css'
+import "../src/assets/styles/global.scss";
+import { AppContextProvider } from "../src/context/appContext";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const AppContainer = ({ Component, pageProps }) => {
+  return (
+    <AppContextProvider>
+      <Component {...pageProps} />
+    </AppContextProvider>
+  );
+};
+
+export default AppContainer;

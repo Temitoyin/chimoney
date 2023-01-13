@@ -1,0 +1,53 @@
+@import '../../assets/styles/shared-styles.scss';
+
+.message{
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    border-radius: 5px 0px 0px 5px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    top: 65px;
+    right: 0;
+    width: 350px;
+    height: 40px;
+    color: $white;
+}
+
+.show{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: $success;
+    animation-name: show;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+    @include media('<=phone'){
+        animation-name: showMobile;
+
+    }
+}
+.hide{
+    display: none;
+    animation-name: hide;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+
+}
+@keyframes show {
+    0%   {right: -100px; opacity: 0;}
+    50%  {opacity: 0.4;}
+    100% {right: 0px; opacity: 1;}
+  }
+  @keyframes showMobile {
+    0%   {right: 0px; opacity: 0;}
+    50%  {opacity: 0.4;}
+    100% {right: 0px; opacity: 1;}
+  }
+
+  @keyframes hide {
+    0%   {right: 100px; opacity: 1;}
+    50%  {opacity: 0.4;}
+    100% {right: 0px; opacity: 0}
+  }

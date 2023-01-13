@@ -1,0 +1,33 @@
+@import '../../assets/styles/shared-styles.scss';
+.quantityController{
+    width: 105px;
+    border-radius: 3px;
+    height: 35px;
+    display: flex;
+    border: 0.5px solid $grey2;
+    margin-top: 10px;
+    @include media('<=phone'){
+        height:25px;
+        width: 75px; 
+    }
+    &_buttonClass{
+        width: 35px;
+        height: 100%;
+        border: 0.5px solid $grey2;
+        @include media('<=phone'){
+            width:25px; 
+        }
+    }
+    p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 35px;
+        border-top: 0.2px solid $grey2;
+        border-bottom: 0.2px solid $grey2;
+        @include media('<=phone'){
+            width:25px; 
+        }
+    }
+}

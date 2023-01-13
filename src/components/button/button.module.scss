@@ -1,0 +1,11 @@
+
+.button{
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.01);
+    }
+}
+.disabled{
+    background-color: darkgray !important;
+    cursor: not-allowed;
+}
